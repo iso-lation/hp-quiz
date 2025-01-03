@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts Quiz</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Question <%= questionIndex + 1 %> of <%= questions.length %></h1>
+        <h2><%= question.question %></h2>
+
+        <form action="/quiz" method="POST" id="quizForm">
+            <input type="hidden" name="questionIndex" value="<%= questionIndex %>">
+            <% question.answers.forEach(answer => { %>
+                <div class="answers">
+                    <input type="radio" id="<%= answer.text %>" name="answer" value="<%= answer.text %>" required>
+                    <label for="<%= answer.text %>"><%= answer.text %></label>
+                </div>
+            <% }); %>
+            <!-- <button type="submit">Next</button> --> <!-- Removed button since we will submit automatically -->
+        </form>
+    </div>
+
+    <script>
+        // Add event listener to radio buttons to automatically submit the form when an option is selected
+        const radioButtons = document.querySelectorAll('input[name="answer"]');
+        
+        radioButtons.forEach(button => {
+            button.addEventListener('change', () => {
+                document.getElementById('quizForm').submit();  // Automatically submit the form when an answer is selected
+            });
+        });
+    </script>
+</body>
+</html>

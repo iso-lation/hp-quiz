@@ -1,0 +1,231 @@
+/* General body styling */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f3f3f3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container for all content */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the container 
+.container:hover {
+    transform: scale(1.02);
+}
+*/
+li {
+    list-style-type: none;
+    text-align: center;
+}
+
+/* Form design */
+/* Center the form items */
+form {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+  }
+  
+  /* Answer options */
+  .answers {
+    width: 500px;
+    padding: 20px;
+    border: 2px solid #333;
+    margin: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  /* Hover effect on options */
+  .answers:hover {
+    background-color: #c2eaf4;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  /* Select effect when the radio button is checked */
+  .answers input[type="radio"]:checked + label {
+    background-color: #c2d4f4;
+    color: #333;
+  }
+  
+  .answers:checked {
+    background-color: #c2d4f4;
+    color: #333;
+  }
+  /* Hide the default radio button */
+  .answers input[type="radio"] {
+    display: none;
+  }
+  
+  /* Label styling (inside .answers div) */
+  .answers label {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  /* Hover effect on labels */
+  .answers label:hover {
+    background-color: #c2eaf4;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+/* Header Section */
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #2C3E50;
+}
+
+.intro {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Call to Action button */
+.cta {
+    margin-top: 30px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Hover effect for buttons */
+.cta a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+li.houses{
+    font-family: 'Georgia, serif';
+    text-align: center;
+    font-weight: bold;
+}
+
+/* General result styling */
+.results {
+    margin: 50px;
+} 
+
+.house-result {
+    padding: 20px;
+    margin: 20px;
+}
+
+.house-name {
+    margin-bottom: 20px; /* Space between each house result */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/* Result label styling */
+.result-label {
+    margin-bottom: 5px; /* Space between the label and the progress bar */
+    font-size: 1.2em;
+    text-align: left;
+}
+
+/* Progress bar container */
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    margin: 10px 0;
+    position: relative;
+}
+
+/* Animated diagonal stripes with gradient overlay */
+.progress-fill {
+    height: 100%;
+    width: 0; /* Start with 0 width for animation */
+    transition: width 1.5s ease; /* Smooth animation */
+    background-size: 20px 20px;
+    background-repeat: repeat;
+}
+
+/* Gryffindor: Red and Gold */
+.progress-fill.gryffindor {
+    background-image: linear-gradient(135deg, #ae0001 25%, #eeba30 25%, #eeba30 50%, #ae0001 50%, #ae0001 75%, #eeba30 75%);
+}
+
+/* Hufflepuff: Yellow and Black */
+.progress-fill.hufflepuff {
+    background-image: linear-gradient(135deg, #ffdb00 25%, #606060 25%, #606060 50%, #ffdb00 50%, #ffdb00 75%, #606060 75%);
+}
+
+/* Ravenclaw: Blue and Bronze */
+.progress-fill.ravenclaw {
+    background-image: linear-gradient(135deg, #222f5b 25%, #946b2d 25%, #946b2d 50%, #222f5b 50%, #222f5b 75%, #946b2d 75%);
+}
+
+/* Slytherin: Green and Silver */
+.progress-fill.slytherin {
+    background-image: linear-gradient(135deg, #2a623d 25%, #c0c0c0 25%, #c0c0c0 50%, #2a623d 50%, #2a623d 75%, #c0c0c0 75%);
+}
+
+
+
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .intro {
+        font-size: 1em;
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
