@@ -1,6 +1,12 @@
-/* General body styling */
+/* Add Lumos font */
+@font-face {
+    font-family: 'Lumos';
+    src: url('/fonts/Lumos.ttf') format('truetype'); /* Path to the font file */
+}
+
+/* Apply the Lumos font */
 body {
-    font-family: 'Georgia', serif;
+    font-family: 'Lumos', Georgia, serif; /* Use Lumos first, fallback to Georgia */
     background-color: #f3f3f3;
     color: #333;
     margin: 0;
@@ -11,9 +17,9 @@ body {
     min-height: 100vh;
 }
 
-/* Container for all content */
+/* Adjust container background to be transparent */
 .container {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -23,11 +29,11 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Hover effect for the container 
+/* Hover effect for the container */
 .container:hover {
     transform: scale(1.02);
 }
-*/
+
 li {
     list-style-type: none;
     text-align: center;

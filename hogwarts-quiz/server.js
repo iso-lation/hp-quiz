@@ -252,6 +252,13 @@ app.get('/', (req, res) => {
 });
 
 
+// Add background images
+const backgroundImages = [
+    '/images/bg1.jpg',
+    '/images/bg2.jpg',
+    '/images/bg3.jpg'
+];
+
 app.get('/quiz', (req, res) => {
     const questionIndex = req.session.questionIndex;
     const currentQuestion = req.session.questions[questionIndex];
@@ -261,8 +268,17 @@ app.get('/quiz', (req, res) => {
         return res.redirect('/result');
     }
 
-    res.render('quiz', { question: currentQuestion, questionIndex, questions: req.session.questions });
+    // Randomize background image for the current question
+    const randomImage = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
+
+    res.render('quiz', { 
+        question: currentQuestion, 
+        questionIndex, 
+        questions: req.session.questions,
+        backgroundImage: randomImage 
+    });
 });
+
 
 
 app.post('/quiz', (req, res) => {

@@ -6,7 +6,7 @@
     <title>Hogwarts Quiz</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
+<body style="background-image: url('<%= backgroundImage %>'); background-size: cover; background-position: center;">
     <div class="container">
         <h1>Question <%= questionIndex + 1 %> of <%= questions.length %></h1>
         <h2><%= question.question %></h2>
@@ -19,19 +19,18 @@
                     <label for="<%= answer.text %>"><%= answer.text %></label>
                 </div>
             <% }); %>
-            <!-- <button type="submit">Next</button> --> <!-- Removed button since we will submit automatically -->
         </form>
     </div>
 
     <script>
-        // Add event listener to radio buttons to automatically submit the form when an option is selected
         const radioButtons = document.querySelectorAll('input[name="answer"]');
         
         radioButtons.forEach(button => {
             button.addEventListener('change', () => {
-                document.getElementById('quizForm').submit();  // Automatically submit the form when an answer is selected
+                document.getElementById('quizForm').submit();
             });
         });
     </script>
 </body>
+
 </html>
