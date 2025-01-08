@@ -150,6 +150,7 @@ h1 {
 /* new section for questions */
 h2 {
     font-size: 2.0em;
+    letter-spacing: 2px;
 }
 .intro {
     font-size: 1.2em;
