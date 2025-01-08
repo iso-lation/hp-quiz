@@ -7,27 +7,28 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Your Results</h1>
-        <h2>You are in <%= Object.keys(housePercentages).reduce((a, b) => housePercentages[a] > housePercentages[b] ? a : b) %>!</h2>
-        <p>Here’s how you align with each Hogwarts house:</p>
+    <div class="result-background-container">
+        <div class="container">
+            <h1>Your Results</h1>
+            <h2>You are in <%= Object.keys(housePercentages).reduce((a, b) => housePercentages[a] > housePercentages[b] ? a : b) %>!</h2>
+            <p>Here’s how you align with each Hogwarts house:</p>
 
-        <!-- Displaying the house percentages -->
-        <div class="results">
-            <% Object.entries(housePercentages).forEach(([house, percentage]) => { %>
-                <div class="house-result">
-                    <span class="house-name"><%= house %>: <%= percentage %>%</span>
-                    <div class="progress-bar <%= house.toLowerCase() %>">
-                        <div class="progress-fill <%= house.toLowerCase() %>" data-percentage="<%= percentage %>"></div>
+            <!-- Displaying the house percentages -->
+            <div class="results">
+                <% Object.entries(housePercentages).forEach(([house, percentage]) => { %>
+                    <div class="house-result">
+                        <span class="house-name"><%= house %>: <%= percentage %>%</span>
+                        <div class="progress-bar <%= house.toLowerCase() %>">
+                            <div class="progress-fill <%= house.toLowerCase() %>" data-percentage="<%= percentage %>"></div>
+                        </div>
+                        <!-- <span class="percentage"><%= percentage %>%</span> -->
                     </div>
-                    <!-- <span class="percentage"><%= percentage %>%</span> -->
-                </div>
-            <% }); %>
+                <% }); %>
+            </div>
+
+            <a href="/" class="btn">Take Quiz Again</a>
         </div>
-
-        <a href="/" class="btn">Take Quiz Again</a>
     </div>
-
     <!-- JavaScript for dynamic progress bars -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
