@@ -141,12 +141,16 @@ header {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3.5em; /* changed from 2.5 */
     margin-bottom: 10px;
     color: #ffd700; /* Gold */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* new section for questions */
+h2 {
+    font-size: 2.0em;
+}
 .intro {
     font-size: 1.2em;
     color: #ccc;
