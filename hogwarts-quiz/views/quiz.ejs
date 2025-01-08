@@ -7,24 +7,25 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body style="background-image: url('<%= backgroundImage %>'); background-size: cover; background-position: center;">
-    <div class="container">
-        <h1>Question <%= questionIndex + 1 %> of <%= questions.length %></h1>
-        <h2><%= question.question %></h2>
+    <div class="background-container">
+        <div class="container">
+            <h1><%= questionIndex + 1 %> / <%= questions.length %></h1>
+            <h2><%= question.question %></h2>
 
-        <form action="/quiz" method="POST" id="quizForm">
-            <input type="hidden" name="questionIndex" value="<%= questionIndex %>">
-            <% question.answers.forEach(answer => { %>
-                <div class="answers">
-                    <input type="radio" id="<%= answer.text %>" name="answer" value="<%= answer.text %>" required>
-                    <label for="<%= answer.text %>"><%= answer.text %></label>
-                </div>
-            <% }); %>
-        </form>
+            <form action="/quiz" method="POST" id="quizForm">
+                <input type="hidden" name="questionIndex" value="<%= questionIndex %>">
+                <% question.answers.forEach(answer => { %>
+                    <div class="answers">
+                        <input type="radio" id="<%= answer.text %>" name="answer" value="<%= answer.text %>" required>
+                        <label for="<%= answer.text %>"><%= answer.text %></label>
+                    </div>
+                <% }); %>
+            </form>
+        </div>
     </div>
 
     <script>
         const radioButtons = document.querySelectorAll('input[name="answer"]');
-        
         radioButtons.forEach(button => {
             button.addEventListener('change', () => {
                 document.getElementById('quizForm').submit();
@@ -32,5 +33,4 @@
         });
     </script>
 </body>
-
 </html>

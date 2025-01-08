@@ -1,14 +1,14 @@
 /* Add Lumos font */
 @font-face {
-    font-family: 'Lumos';
-    src: url('/fonts/Lumos.ttf') format('truetype'); /* Path to the font file */
+    font-family: 'HarryP';
+    src: url('/fonts/HarryP.ttf') format('truetype'); /* Path to the font file */
 }
 
 /* Apply the Lumos font */
 body {
-    font-family: 'Lumos', Georgia, serif; /* Use Lumos first, fallback to Georgia */
-    background-color: #f3f3f3;
-    color: #333;
+    font-family: 'HarryP', Georgia, serif; /* Use Lumos first, fallback to Georgia */
+    background-color: #000; /* Fallback background color */
+    color: #fff;
     margin: 0;
     padding: 0;
     display: flex;
@@ -17,12 +17,48 @@ body {
     min-height: 100vh;
 }
 
+/* Background container styling */
+.background-container {
+    background-image: url('/images/hogwarts-background.jpg'); /* Path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-background-container {
+    background-image: url('https://external-preview.redd.it/IcMRsBEFHttS_G3MAb2bmhQ_g5yDCDkuQwyPXerTONo.jpg?auto=webp&s=a60dbf1acb507062418b36e7fe7dcefc0d9864fc'); /* Path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-background-container {
+    background-image: url('https://studyabroad.berkeley.edu/sites/default/files/styles/gallery_full/public/stories/29347163113_36d3dad813_k%20%281%29.jpg?itok=zc9I4ZZT'); /* Path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* Adjust container background to be transparent */
 .container {
-    background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     width: 90%;
     max-width: 800px;
     text-align: center;
@@ -44,60 +80,61 @@ li {
 form {
     display: inline-flex;
     flex-direction: column;
-    align-items: center; /* Center the items horizontally */
-  }
-  
-  /* Answer options */
-  .answers {
+    align-items: center;
+}
+
+/* Answer options */
+.answers {
     width: 500px;
     padding: 20px;
-    border: 2px solid #333;
+    border: 2px solid #ffd700; /* Gold border */
     margin: 10px 0;
     text-align: center;
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  /* Hover effect on options */
-  .answers:hover {
-    background-color: #c2eaf4;
+}
+
+/* Hover effect on options */
+.answers:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
     transform: scale(1.05);
     cursor: pointer;
-  }
-  
-  /* Select effect when the radio button is checked */
-  .answers input[type="radio"]:checked + label {
-    background-color: #c2d4f4;
-    color: #333;
-  }
-  
-  .answers:checked {
-    background-color: #c2d4f4;
-    color: #333;
-  }
-  /* Hide the default radio button */
-  .answers input[type="radio"] {
+}
+
+/* Select effect when the radio button is checked */
+.answers input[type="radio"]:checked + label {
+    background-color: rgba(255, 215, 0, 0.5); /* Semi-transparent gold */
+    color: #000;
+}
+
+.answers:checked {
+    background-color: rgba(255, 215, 0, 0.5); /* Semi-transparent gold */
+    color: #000;
+}
+
+/* Hide the default radio button */
+.answers input[type="radio"] {
     display: none;
-  }
-  
-  /* Label styling (inside .answers div) */
-  .answers label {
+}
+
+/* Label styling (inside .answers div) */
+.answers label {
     display: inline-block;
     font-size: 18px;
     font-weight: bold;
     padding: 10px;
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  /* Hover effect on labels */
-  .answers label:hover {
-    background-color: #c2eaf4;
+}
+
+/* Hover effect on labels */
+.answers label:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
     transform: scale(1.05);
     cursor: pointer;
-  }
-  
+}
+
 /* Header Section */
 header {
     margin-bottom: 20px;
@@ -106,12 +143,13 @@ header {
 h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: #2C3E50;
+    color: #ffd700; /* Gold */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .intro {
     font-size: 1.2em;
-    color: #666;
+    color: #ccc;
 }
 
 /* Call to Action button */
@@ -121,8 +159,8 @@ h1 {
 
 .btn {
     text-decoration: none;
-    background-color: #007BFF;
-    color: white;
+    background-color: #ffd700; /* Gold */
+    color: black;
     padding: 12px 24px;
     font-size: 1.2em;
     border-radius: 30px;
@@ -133,7 +171,7 @@ h1 {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #ffc107; /* Slightly lighter gold */
     transform: scale(1.05);
 }
 
@@ -143,8 +181,7 @@ h1 {
     text-decoration: none;
 }
 
-li.houses{
-    font-family: 'Georgia, serif';
+li.houses {
     text-align: center;
     font-weight: bold;
 }
@@ -152,7 +189,7 @@ li.houses{
 /* General result styling */
 .results {
     margin: 50px;
-} 
+}
 
 .house-result {
     padding: 20px;
@@ -161,7 +198,6 @@ li.houses{
 
 .house-name {
     margin-bottom: 20px; /* Space between each house result */
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
 
@@ -175,15 +211,17 @@ li.houses{
 /* Progress bar container */
 .progress-bar {
     width: 100%;
-    background-color: #e0e0e0;
+    background-color: rgba(0, 0, 0, 0.3); /* Dark transparent blend with the container */
     border-radius: 10px;
     overflow: hidden;
     height: 20px;
     margin: 10px 0;
     position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Subtle border for definition */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); /* Inner shadow for depth */
 }
 
-/* Animated diagonal stripes with gradient overlay */
+/* Filled portion of the progress bar */
 .progress-fill {
     height: 100%;
     width: 0; /* Start with 0 width for animation */
@@ -194,25 +232,76 @@ li.houses{
 
 /* Gryffindor: Red and Gold */
 .progress-fill.gryffindor {
-    background-image: linear-gradient(135deg, #ae0001 25%, #eeba30 25%, #eeba30 50%, #ae0001 50%, #ae0001 75%, #eeba30 75%);
+    background-image: linear-gradient(
+        135deg,
+        #ae0001 25%,
+        #eeba30 25%,
+        #eeba30 50%,
+        #ae0001 50%,
+        #ae0001 75%,
+        #eeba30 75%
+    );
 }
 
 /* Hufflepuff: Yellow and Black */
 .progress-fill.hufflepuff {
-    background-image: linear-gradient(135deg, #ffdb00 25%, #606060 25%, #606060 50%, #ffdb00 50%, #ffdb00 75%, #606060 75%);
+    background-image: linear-gradient(
+        135deg,
+        #ffdb00 25%,
+        #606060 25%,
+        #606060 50%,
+        #ffdb00 50%,
+        #ffdb00 75%,
+        #606060 75%
+    );
 }
 
 /* Ravenclaw: Blue and Bronze */
 .progress-fill.ravenclaw {
-    background-image: linear-gradient(135deg, #222f5b 25%, #946b2d 25%, #946b2d 50%, #222f5b 50%, #222f5b 75%, #946b2d 75%);
+    background-image: linear-gradient(
+        135deg,
+        #222f5b 25%,
+        #946b2d 25%,
+        #946b2d 50%,
+        #222f5b 50%,
+        #222f5b 75%,
+        #946b2d 75%
+    );
 }
 
 /* Slytherin: Green and Silver */
 .progress-fill.slytherin {
-    background-image: linear-gradient(135deg, #2a623d 25%, #c0c0c0 25%, #c0c0c0 50%, #2a623d 50%, #2a623d 75%, #c0c0c0 75%);
+    background-image: linear-gradient(
+        135deg,
+        #2a623d 25%,
+        #c0c0c0 25%,
+        #c0c0c0 50%,
+        #2a623d 50%,
+        #2a623d 75%,
+        #c0c0c0 75%
+    );
 }
 
+/* Transparent blending for the unfilled portion */
+.progress-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Darker transparent shade for blending */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    pointer-events: none; /* Ensures filled area works as expected */
+}
 
+/* Ensure the filled portion overlays correctly */
+.progress-fill {
+    position: relative;
+    z-index: 1;
+    border-radius: 10px; /* Match container's rounded corners */
+}
 
 
 /* Mobile responsiveness */
