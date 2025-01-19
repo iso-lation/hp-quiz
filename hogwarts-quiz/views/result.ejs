@@ -9,9 +9,9 @@
 <body>
     <div class="result-background-container">
         <div class="container">
-            <h1>Your Results</h1>
-            <h2>You are in <%= Object.keys(housePercentages).reduce((a, b) => housePercentages[a] > housePercentages[b] ? a : b) %>!</h2>
-            <p>Here’s how you align with each Hogwarts house:</p>
+            <h1 id="final-results">Your Results</h1>
+            <h2 id="house-placement">You are in <%= Object.keys(housePercentages).reduce((a, b) => housePercentages[a] > housePercentages[b] ? a : b) %>!</h2>
+            <p id="house-align">Here’s how you align with each Hogwarts house:</p>
 
             <!-- Displaying the house percentages -->
             <div class="results">

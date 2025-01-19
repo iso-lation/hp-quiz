@@ -118,15 +118,26 @@ form {
     display: none;
 }
 
-/* Label styling (inside .answers div) */
+/* Add Cormorant Garamond font */
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap'); /* Google Fonts */
+}
+
+/* Apply Cormorant Garamond to answer options */
 .answers label {
-    display: inline-block;
-    font-size: 18px;
-    font-weight: bold;
+    font-family: 'Cormorant Garamond', Georgia, serif; /* Primary font is Cormorant Garamond, fallback to Georgia */
+    font-size: 24px; /* Keep it readable */
+    font-weight: 700; /* Use bold weight for better visibility */
+    font-style: italic;
     padding: 10px;
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.3s;
+    color: #FFD700; /* Gold color to match the magical theme */
+    letter-spacing: 0.5px; /* Add a touch of spacing for elegance */
 }
+
+
 
 /* Hover effect on labels */
 .answers label:hover {
@@ -141,7 +152,7 @@ header {
 }
 
 h1 {
-    font-size: 3.5em; /* changed from 2.5 */
+    font-size: 4.0em; /* changed from 2.5 */
     margin-bottom: 10px;
     color: #ffd700; /* Gold */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
@@ -149,11 +160,11 @@ h1 {
 
 /* new section for questions */
 h2 {
-    font-size: 2.0em;
+    font-size: 2.5em;
     letter-spacing: 2px;
 }
 .intro {
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: #ccc;
 }
 
@@ -196,6 +207,14 @@ li.houses {
     margin: 50px;
 }
 
+#house-placement {
+    font-size: 2.8em;
+}
+
+#house-align {
+    font-size: 2.5em;
+}
+
 .house-result {
     padding: 20px;
     margin: 20px;
@@ -204,6 +223,7 @@ li.houses {
 .house-name {
     margin-bottom: 20px; /* Space between each house result */
     font-weight: bold;
+    font-size: 1.8em;
 }
 
 /* Result label styling */
