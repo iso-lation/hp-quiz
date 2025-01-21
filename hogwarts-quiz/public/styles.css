@@ -141,9 +141,10 @@ form {
 
 /* Hover effect on labels */
 .answers label:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
+    /*background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
     transform: scale(1.05);
     cursor: pointer;
+    padding: 0;
 }
 
 /* Header Section */
